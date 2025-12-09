@@ -67,7 +67,8 @@ kubectl get pod
 ```
 Showing like that  
   
-<img width="577" height="96" alt="1" src="https://github.com/user-attachments/assets/b6205978-02e2-4520-8a37-d290e8d3a125" />  
+<img width="577" height="96" alt="1" src="https://github.com/user-attachments/assets/04ed52f5-dba8-4163-82ad-edcec97fcedf" />  
+   
 vim nginx.yaml  
 ```yaml
 apiVersion: v1
@@ -98,7 +99,8 @@ status: {}
 kubectl label nodes cka-cluster2-worker disktype=ssd
 ```
   
-<img width="1062" height="203" alt="2" src="https://github.com/user-attachments/assets/3e1baca0-a546-40a0-9359-dd93c6f2bf09" />  
+<img width="1062" height="203" alt="2" src="https://github.com/user-attachments/assets/6e00ba68-a13c-4ae3-832b-d8199c60cc89" />  
+   
 2) create a new pod with redis as the image and add the nodeaffinity with property requiredDuringSchedulingIgnoredDuringExecution  
 and condition disktype without any value  
 ```bash
@@ -134,10 +136,12 @@ kubectl get pod
 ```
 Showing like that  
   
-<img width="577" height="108" alt="3" src="https://github.com/user-attachments/assets/c29a6f2a-b780-4f8d-9b4b-c75b7164adc0" />  
+<img width="577" height="108" alt="3" src="https://github.com/user-attachments/assets/85b3f8bc-ba13-4824-b066-6acd5607d5e3" />  
+   
 Because of below yaml file added  
   
-<img width="558" height="175" alt="4" src="https://github.com/user-attachments/assets/6d2af025-e06c-45e4-9726-de5dbdf64a44" />  
+<img width="558" height="175" alt="4" src="https://github.com/user-attachments/assets/518b1aaf-8b14-4e8b-b643-afd9b596cff5" />  
+   
 3) ensure that pod2 should be scheduled on worker02 node  
 ```bash
 kubectl label nodes cka-cluster2-worker2 disktype=
@@ -153,7 +157,8 @@ kubectl get pod -o wide
 ```
 Showing like that  
   
-<img width="1053" height="108" alt="5" src="https://github.com/user-attachments/assets/84b3c5f4-d6bd-4fbd-a9b5-72d69413b2ba" />  
+<img width="1053" height="108" alt="5" src="https://github.com/user-attachments/assets/3d0a7eb8-2246-4486-be83-2ce46ddadcb6" />  
+  
 Check out the today's lecture from Original Mentor #Piyushsachdeva  
 Youtube - https://youtu.be/5vimzBRnoDk?si=IJ0uQJuX8IZAuXBD  
 Github - https://github.com/piyushsachdeva/CKA-2024/blob/main/Resources/Day15/readme.md  
