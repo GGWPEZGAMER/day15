@@ -66,6 +66,7 @@ kubectl apply -f nginx.yaml
 kubectl get pod
 ```
 Showing like that  
+  
 <img width="577" height="96" alt="1" src="https://github.com/user-attachments/assets/b6205978-02e2-4520-8a37-d290e8d3a125" />  
 vim nginx.yaml  
 ```yaml
@@ -96,6 +97,7 @@ status: {}
 ```bash
 kubectl label nodes cka-cluster2-worker disktype=ssd
 ```
+  
 <img width="1062" height="203" alt="2" src="https://github.com/user-attachments/assets/3e1baca0-a546-40a0-9359-dd93c6f2bf09" />  
 2) create a new pod with redis as the image and add the nodeaffinity with property requiredDuringSchedulingIgnoredDuringExecution  
 and condition disktype without any value  
@@ -131,8 +133,10 @@ kubectl apply -f redis.yaml
 kubectl get pod
 ```
 Showing like that  
+  
 <img width="577" height="108" alt="3" src="https://github.com/user-attachments/assets/c29a6f2a-b780-4f8d-9b4b-c75b7164adc0" />  
 Because of below yaml file added  
+  
 <img width="558" height="175" alt="4" src="https://github.com/user-attachments/assets/6d2af025-e06c-45e4-9726-de5dbdf64a44" />  
 3) ensure that pod2 should be scheduled on worker02 node  
 ```bash
@@ -148,6 +152,7 @@ kubectl apply -f redis.yaml
 kubectl get pod -o wide
 ```
 Showing like that  
+  
 <img width="1053" height="108" alt="5" src="https://github.com/user-attachments/assets/84b3c5f4-d6bd-4fbd-a9b5-72d69413b2ba" />  
 Check out the today's lecture from Original Mentor #Piyushsachdeva  
 Youtube - https://youtu.be/5vimzBRnoDk?si=IJ0uQJuX8IZAuXBD  
